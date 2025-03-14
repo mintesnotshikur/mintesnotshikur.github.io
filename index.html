@@ -39,30 +39,30 @@
     <section class="about-me">
         <p class="greeting">👋 Hey there, nice to meet you</p>
         <p class="about-me-intro">
-            I am a <span>website</span> and <span>mobile</span> app developer
+            I am a <span>website</span> and <span>mobile app</span> developer
         </p>
-        <p class="about-me-text-more" style="width: 70%;">
+        <p class="about-me-text-more">
             I have a Computer Science degree and skills in HTML, CSS, JavaScript, React, React Native   . I am eager to contribute to innovative projects and further develop my professional skills.
         </p>
-        <a href="mailto:mintesnotshikur2@gamil.com">
-            <button class="talk-button" style="width: 20%;">
+        <a href="mailto:mintesnotshikur2@gamil.com" style="width: max-content;">
+            <button class="talk-button">
                     Talk with me
             </button>
         </a>
     </section>
 
     <section class="projects">
-        <!-- <p class="projects-title">Projects</p> -->
+        <div class="project-card" title="Keep hovering to play video">
+            <a href="" target="_blank" >
+                <!-- <img src="./assets/projects/patient management system.jpg" alt=""> -->
+                <video src="./assets/projects/rosary prayer.mp4"  muted loop style="width: 300px; height: 200px;" onmouseover="this.play()" onmouseout="this.pause()"></video>
+                <p>Rosary Prayer App</p>
+            </a>
+        </div>
         <div class="project-card">
             <a href="" target="_blank">
                 <img src="./assets/projects/patient management system.jpg" alt="">
                 <p ">Patient Management System</p>
-            </a>
-        </div>
-        <div class="project-card">
-            <a href="https://mntua.github.io/todo-list/" target="_blank">
-                <img src="./assets/projects/simple todo list.png" alt="">
-                <p ">Simple Todo List</p>
             </a>
         </div>
         <div class="project-card">
@@ -71,7 +71,6 @@
                 <p>Task Manager with Local Storage</p>
             </a>
         </div>
-
         <div class="project-card">
             <a href="https://mntua.github.io/memory-test-game/" target="_blank">
                 <img src="./assets/projects/memory test game.png" alt="">
@@ -84,9 +83,32 @@
                 <p>Password Generator</p>
             </a>
         </div>
+        <div class="project-card">
+            <a href="https://mntua.github.io/todo-list/" target="_blank">
+                <img src="./assets/projects/simple todo list.png" alt="">
+                <p ">Simple Todo List</p>
+            </a>
+        </div>
     </section>
 
     <footer>
+        <div class="footer-links">
+            <button class="link-button">
+                <a href="https://www.instagram.com/mintesnot_shikur?igsh=MWRzZTZmN2U2ZDkydA==" target="_blank">
+                    <img src="./assets/icons/instagram.svg" alt="">
+                </a>
+            </button>
+            <button class="link-button">
+                <a href="https://t.me/mintesnot_shikur" target="_blank">
+                    <img src="./assets/icons/telegram.svg" alt="">
+                </a>
+            </button>
+            <button class="link-button">
+                <a href="https://github.com/Mntua" target="_blank">
+                    <img src="./assets/icons/github.svg" alt="">
+                </a>
+            </button>
+        </div>
         <p class="footer-text">
             Made with ❤️ by Mintesnot Shikur
         </p>

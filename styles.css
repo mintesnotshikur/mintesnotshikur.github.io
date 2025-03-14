@@ -28,7 +28,6 @@ body {
     padding-top: 30px
 }
 .talk-button {
-    /* width: 20%; */
     font-family: 'Josefin Sans', sans-serif;
     background-color: var(--primary-color);
     color: white;
@@ -41,7 +40,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        padding: 12px 15px;
+        
+    }
 
     &:hover {
         background-color: var(--secondary-color);
@@ -55,10 +58,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed; */
     width: 80%;
-    /* z-index: 1000; */
-    /* top: 0; */
     border: 1px solid gray;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -113,38 +113,62 @@ header {
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        width: 96%;
+        
+        .left-side {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .link-button {
+            display: none;
+        }
+    }
 }
 
 .about-me {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     width: 80%;
     padding-top: 8%;
 
     .about-me-intro {
         font-size: 4rem;
         font-weight: 800;
-        text-align: justify;
+        /* text-align: justify; */
         line-height: 1;
 
         span {
             color: var(--secondary-color);
             font-family: 'Josefin Sans', sans-serif;
-            /* font-weight: 100; */ 
-            /* text-transform: capitalize; */
-            /* font-style: italic; */
-            /* text-decoration: underline; */
+        }
+
+    }
+    .about-me-text-more {
+        width: 70%;
+    }
+    @media screen and (max-width: 768px) {
+        .about-me-intro {
+            font-size: 2rem;
+        }
+
+        .about-me-text-more {
+            width: 100%;
+            text-align: justify;
         }
     }
 }
 
 .projects {
     display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap: nowrap;
-    justify-content: start;
-    align-items: start; */
     gap: 1rem;
     width: 100%;
     overflow-x: auto;
@@ -162,13 +186,12 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        width: 500px;
+        /* width: 500px; */
         padding: 15px;
         border: 1px solid #dedcdc;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: white;
-
 
         a {
             font-size: 1rem;
@@ -179,11 +202,11 @@ header {
             justify-content: center;
             gap: 1rem;
             overflow: hidden;
-            width: 400px;
+            /* width: 400px; */
             text-decoration: none;
             
             img {
-                width: 400px;
+                width: 300px;
                 height: auto;
                 border-radius: 10px;
 
@@ -193,7 +216,7 @@ header {
             }
             
             p {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 400;
                 color: #333;
             }
@@ -203,4 +226,49 @@ header {
 
 footer {
     margin: 3% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .footer-links {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        .link-button {
+            align-items: center;
+            border: 1px solid #dedcdc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            a{
+                display: flex;
+                align-items: center;
+                padding: 5px;
+            }
+
+            &:hover {
+                background-color: #d6d4d4;
+            }
+            
+            img {
+                width: 45px;
+                height: 45px;
+
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+        }
+    }
 }
+
